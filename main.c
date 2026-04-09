@@ -37,6 +37,9 @@ int main(int argc, char *argv[]) {
     case ADD:
         printf("%d", add(a, b));
         break;
+    case SUB:
+        printf("%d", sub(a, b));
+        break;
     default:
         printf("NAN");
         break;
