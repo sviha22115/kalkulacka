@@ -40,6 +40,9 @@ int main(int argc, char *argv[]) {
     case SUB:
         printf("%d", sub(a, b));
         break;
+    case MULT:
+        printf("%d", imul(a, b));
+        break;
     default:
         printf("NAN");
         break;
