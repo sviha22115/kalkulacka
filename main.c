@@ -7,19 +7,19 @@
 #define MULT 3
 #define DIV 4
 
-int add(int a, int b) {
+float add(float a, float b) {
     return a + b;
 }
 
-int sub(int a, int b) {
+float sub(float a, float b) {
     return a - b;
 }
 
-int imul(int a, int b) {
+float imul(float a, float b) {
     return a * b;
 }
 
-int divide(int a, int b) {
+float divide(float a, float b) {
     return a / b;
 }
 
@@ -29,19 +29,26 @@ int main(int argc, char *argv[]) {
     printf("input choice num: ");
     scanf("%d", &selection);
 
-    int a, b;
+    float a, b;
     printf("zadejte 2 cisla: ");
-    scanf("%d%d", &a, &b);
+    scanf("%f%f", &a, &b);
 
     switch (selection) {
     case ADD:
-        printf("%d", add(a, b));
+        printf("%f", add(a, b));
         break;
     case SUB:
-        printf("%d", sub(a, b));
+        printf("%f", sub(a, b));
         break;
     case MULT:
-        printf("%d", imul(a, b));
+        printf("%f", imul(a, b));
+        break;
+    case DIV:
+        if (b == 0) {
+            printf("NAN");
+        } else {
+            printf("%.3f", divide(a, b));
+        }
         break;
     default:
         printf("NAN");
